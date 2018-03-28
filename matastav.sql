@@ -1,4 +1,4 @@
-USE skola;
+USE 4IT436;
 GO
 
 --doladit nektere meny/penize
@@ -605,7 +605,7 @@ CREATE TABLE xhyvv00_t_vydaje_zdroje_skutecnost
 ;
 GO
 
-CREATE TABLE xhyvv00_t_PV
+CREATE TABLE xhyvv00_f_PV
 	(id_pol		int		
 	,castka		numeric(30,3)	NOT NULL
 	,datum		date		NOT NULL
@@ -637,4 +637,7 @@ CREATE TABLE xhyvv00_t_PV
 		REFERENCES xhyvv00_t_zamestnanci(id_zamestnanec)
 		ON UPDATE CASCADE
 		ON DELETE CASCADE
+	)
+;
+GO
 	
