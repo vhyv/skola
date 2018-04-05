@@ -1,6 +1,15 @@
 USE skola;
 GO
 
+
+UPDATE pv
+SET pv.id_pobocka = z.id_pobocka
+FROM xhyvv00_f_PV AS pv
+	INNER JOIN xhyvv00_t_zamestnanci AS z
+	ON pv.id_zamestnanec = z.id_zamestnanec
+;
+GO
+
 CREATE TABLE xhyvv00_t_plan_skutecnost
 	(
 	id_plan_skutecnost	int	IDENTITY(1,1)	PRIMARY KEY
